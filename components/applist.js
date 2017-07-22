@@ -5,11 +5,12 @@ export class ToDoAppList extends React.Component{
     super();
   }
   render(){
+    var items = this.props.tasks.map((elem , i)=>{
+      return <li key={i}>{elem}</li>
+    });
     return (
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        {items}
       </ul>
     );
   }
